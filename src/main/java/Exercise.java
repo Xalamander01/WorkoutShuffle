@@ -38,9 +38,9 @@ public class Exercise {
 
     public void getAllCharacteristics() {
         if (this.isCompound()) {
-            System.out.printf("The %s is a compound exercise that primarily trains the %s movement pattern, usually done with %s weight.", name, movementType, lightOrHeavy);
+            System.out.printf("The %s is a compound exercise that primarily trains the %s movement pattern, usually done with %s weight.\n", name, movementType, lightOrHeavy);
         } else {
-            System.out.printf("The %s is an exercise that is more focused on the %s movement pattern, usually done with %s weight.", name, movementType, lightOrHeavy);
+            System.out.printf("The %s is an exercise that is more focused on the %s movement pattern, usually done with %s weight.\n", name, movementType, lightOrHeavy);
         }
     }
 }
