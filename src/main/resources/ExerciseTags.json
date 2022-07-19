@@ -1,0 +1,20 @@
+[
+{
+        "name":"Barbell Bench Press",
+        "movementType":"push",
+        "lightOrHeavy":"heavy",
+        "isCompound":true
+},
+{
+        "name":"Conventional Deadlift",
+        "movementType":"hinge",
+        "lightOrHeavy":"heavy",
+        "isCompound":true
+},
+{
+        "name":"Alternating Bicep Curl",
+        "movementType":"pull",
+        "lightOrHeavy":"light",
+        "isCompound":"false"
+}
+]
