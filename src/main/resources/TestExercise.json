@@ -1,0 +1,6 @@
+{
+  "name": "Barbell Bench Press",
+  "movementType": "push",
+  "lightOrHeavy": "heavy",
+  "compound": true
+}
