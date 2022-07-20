@@ -1,17 +1,21 @@
 {
-        "Exercises": [
+        "barbellBenchPress": [
                 {
                         "name": "Barbell Bench Press",
                         "movementType": "push",
                         "lightOrHeavy": "heavy",
                         "isCompound": true
-                },
+                }
+        ],
+        "conventionalDeadlift": [
                 {
                         "name": "Conventional Deadlift",
                         "movementType": "hinge",
                         "lightOrHeavy": "heavy",
                         "isCompound": true
-                },
+                }
+        ],
+        "alternatingBicepCurl": [
                 {
                         "name": "Alternating Bicep Curl",
                         "movementType": "pull",

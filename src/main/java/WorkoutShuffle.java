@@ -1,9 +1,8 @@
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import javax.imageio.stream.FileImageOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class WorkoutShuffle {
     public static void main(String[] args) throws IOException {
@@ -14,16 +13,35 @@ public class WorkoutShuffle {
         overheadPress.setMovementType("Push");
         overheadPress.setLightOrHeavy("Heavy");
         overheadPress.setCompound(true);
-        overheadPress.getAllCharacteristics();
+        //overheadPress.getAllCharacteristics();
 
         Exercise benchPress = mapper.readValue(new File("src/main/resources/TestExercise.json"), Exercise.class);
-        benchPress.getAllCharacteristics();
+        //benchPress.getAllCharacteristics();
 
-/*
+        /*
+        ArrayList<Exercise> initialDictionary = new ArrayList<>();
+        initialDictionary.add(overheadPress);
+        initialDictionary.add(benchPress);
+
+        ExerciseDictionary exerciseDictionary = new ExerciseDictionary();
+        exerciseDictionary.setExerciseDictionary(initialDictionary);
+
+         */
+        ExerciseDictionary exerciseDictionary = new ExerciseDictionary();
+        exerciseDictionary.addExercise(overheadPress);
+        exerciseDictionary.addExercise(benchPress);
+
+        for ( Exercise exercise : exerciseDictionary.getExerciseDictionary() ) {
+            exercise.getAllCharacteristics();
+        }
+
+        /*
         ExerciseDictionary exerciseDictionary = mapper.readValue(new File("src/main/resources/ExerciseDictionary.json"), ExerciseDictionary.class);
+        exerciseDictionary.getExerciseDictionary();
+
         for (Exercise exercise : exerciseDictionary ) {
             exercise.getAllCharacteristics();
         }
-*/
+        */
     }
 }
