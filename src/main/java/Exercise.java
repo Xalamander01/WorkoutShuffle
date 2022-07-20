@@ -4,6 +4,13 @@ public class Exercise {
     private String lightOrHeavy;
     private boolean compound;
 
+    public Exercise() {
+        String name = "";
+        String movementType = "";
+        String lightOrHeavy = "";
+        boolean compound = false;
+    }
+
     public String getName() {
         return name;
     }

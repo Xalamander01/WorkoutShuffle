@@ -2,7 +2,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class WorkoutShuffle {
     public static void main(String[] args) throws IOException {
@@ -19,29 +18,22 @@ public class WorkoutShuffle {
         //benchPress.getAllCharacteristics();
 
         /*
-        ArrayList<Exercise> initialDictionary = new ArrayList<>();
-        initialDictionary.add(overheadPress);
-        initialDictionary.add(benchPress);
-
         ExerciseDictionary exerciseDictionary = new ExerciseDictionary();
-        exerciseDictionary.setExerciseDictionary(initialDictionary);
+        exerciseDictionary.addExercise("overheadPress", overheadPress);
+        exerciseDictionary.addExercise("benchPress", benchPress);
 
-         */
-        ExerciseDictionary exerciseDictionary = new ExerciseDictionary();
-        exerciseDictionary.addExercise(overheadPress);
-        exerciseDictionary.addExercise(benchPress);
-
-        for ( Exercise exercise : exerciseDictionary.getExerciseDictionary() ) {
-            exercise.getAllCharacteristics();
+        for ( String name : exerciseDictionary.getExerciseDictionary().keySet() ) {
+            exerciseDictionary.getExercise(name).getAllCharacteristics();
         }
-
-        /*
+*/
+/*
         ExerciseDictionary exerciseDictionary = mapper.readValue(new File("src/main/resources/ExerciseDictionary.json"), ExerciseDictionary.class);
         exerciseDictionary.getExerciseDictionary();
 
-        for (Exercise exercise : exerciseDictionary ) {
-            exercise.getAllCharacteristics();
+        for ( String name : exerciseDictionary.getExerciseDictionary().keySet() ) {
+            exerciseDictionary.getExercise(name).getAllCharacteristics();
         }
-        */
+
+ */
     }
 }
