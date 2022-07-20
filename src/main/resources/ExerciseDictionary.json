@@ -1,25 +1,31 @@
 {
-        "name":"barbellBenchPress",
-        "Exercise":{
-                        "name": "Barbell Bench Press",
-                        "movementType": "push",
-                        "lightOrHeavy": "heavy",
-                        "isCompound": true
-        }
-},{
-        "name":"conventionalDeadlift",
-        "Exercise":{
-                        "name": "Conventional Deadlift",
-                        "movementType": "hinge",
-                        "lightOrHeavy": "heavy",
-                        "isCompound": true
-        }
-},{
-        "name":"alternatingBicepCurl",
-        "Exercise":{
-                        "name": "Alternating Bicep Curl",
-                        "movementType": "pull",
-                        "lightOrHeavy": "light",
-                        "isCompound": "false"
-        }
+  "exerciseDictionary": [
+    {
+      "ShortName": "barbellBenchPress",
+      "Exercise": {
+        "name": "Barbell Bench Press",
+        "movementType": "push",
+        "lightOrHeavy": "heavy",
+        "compound": true
+      }
+    },
+    {
+      "ShortName": "conventionalDeadlift",
+      "Exercise": {
+        "name": "Conventional Deadlift",
+        "movementType": "hinge",
+        "lightOrHeavy": "heavy",
+        "compound": true
+      }
+    },
+    {
+      "ShortName": "alternatingBicepCurl",
+      "Exercise": {
+        "name": "Alternating Bicep Curl",
+        "movementType": "pull",
+        "lightOrHeavy": "light",
+        "compound": false
+      }
+    }
+  ]
 }
