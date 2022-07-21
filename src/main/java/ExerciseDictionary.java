@@ -15,20 +15,20 @@ public class ExerciseDictionary {
         this.exerciseDictionary = exerciseDictionary;
     }
 
-    public void addExercise(String name, Exercise exercise) {
-        this.exerciseDictionary.put(name, exercise);
+    public void addExercise(String shortName, Exercise exercise) {
+        this.exerciseDictionary.put(shortName, exercise);
     }
 
-    public Exercise getExercise(String name) {
-        return this.exerciseDictionary.get(name);
+    public Exercise getExercise(String shortName) {
+        return this.exerciseDictionary.get(shortName);
     }
 
-    public void editExercise(String name, Exercise exercise) {
-        this.exerciseDictionary.remove(name);
-        this.exerciseDictionary.put(name, exercise);
+    public void editExercise(String shortName, Exercise exercise) {
+        this.exerciseDictionary.remove(shortName);
+        this.exerciseDictionary.put(shortName, exercise);
     }
 
-    public void deleteExercise(String name) {
-        this.exerciseDictionary.remove(name);
+    public void deleteExercise(String shortName) {
+        this.exerciseDictionary.remove(shortName);
     }
 }

@@ -3,20 +3,12 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
 
 public class WorkoutShuffle {
     public static void main(String[] args) throws IOException {
 
-        Exercise overheadPress = new Exercise();
-        overheadPress.setName("Overhead Press");
-        overheadPress.setMovementType("Push");
-        overheadPress.setLightOrHeavy("Heavy");
-        overheadPress.setCompound(true);
-        //overheadPress.getAllCharacteristics();
-
-        ObjectMapper mapper = new ObjectMapper();
-        Exercise benchPress = mapper.readValue(new File("src/main/resources/TestExercise.json"), Exercise.class);
+        //ObjectMapper mapper = new ObjectMapper();
+        //Exercise benchPress = mapper.readValue(new File("src/main/resources/TestExercise.json"), Exercise.class);
         //benchPress.getAllCharacteristics();
 
         ExerciseDictionary exerciseDictionary = new ExerciseDictionary();
@@ -32,7 +24,6 @@ public class WorkoutShuffle {
             exerciseToAdd.setCompound((boolean) exercise.get("compound"));
             exerciseDictionary.addExercise(exerciseShortName,exerciseToAdd);
         }
-        System.out.println(exerciseDictionary);
 
         for ( String name : exerciseDictionary.getExerciseDictionary().keySet() ) {
             exerciseDictionary.getExercise(name).getAllCharacteristics();

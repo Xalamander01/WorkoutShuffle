@@ -1,6 +1,15 @@
 {
   "exerciseDictionary": [
     {
+      "ShortName": "overheadPress",
+      "Exercise": {
+        "name": "Overhead Press",
+        "movementType": "push",
+        "lightOrHeavy": "heavy",
+        "compound": true
+      }
+    },
+    {
       "ShortName": "barbellBenchPress",
       "Exercise": {
         "name": "Barbell Bench Press",
