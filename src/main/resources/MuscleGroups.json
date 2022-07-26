@@ -1,0 +1,16 @@
+{
+  "muscleGroups": [
+    {"Quads":["upper","lower"]},
+    {"Glutes":["maximus","medius"]},
+    {"Hamstrings":["hamstring"]},
+    {"Calves":["calf"]},
+    {"Abs":["oblique","abs","transvers"]},
+    {"Pecs":["upper","middle","lower","inner","outer"]},
+    {"Delts":["front","middle","rear"]},
+    {"Lats":["upper","lower"]},
+    {"Traps":["upper","lower"]},
+    {"Biceps":["inner","outer", "brachialis"]},
+    {"Triceps":["long","medial","lateral"]},
+    {"Forearm":["supinator","pronator"]}
+  ]
+}

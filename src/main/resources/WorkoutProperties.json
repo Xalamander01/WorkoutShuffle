@@ -1,0 +1,40 @@
+{
+    "workoutProperties": {
+      "workoutTypes" : ["strength", "endurance"],
+      "workoutSplits": [
+        ["push", "pull", "legs"],
+        ["upper","lower"],
+        "fullBody",
+        ["push","legs","pull","legs","arms"]
+      ]
+    },
+  "musclesToWorkInSplit": {
+    "fullBody": [
+      {"Quads":["upper","lower"]},
+      {"Glutes":["maximus","medius"]},
+      {"Hamstrings":["hamstring"]},
+      {"Calves":["calf"]},
+      {"Abs":["oblique","abs","transvers"]},
+      {"Pecs":["upper","middle","lower","inner","outer"]},
+      {"Delts":["front","middle","rear"]},
+      {"Lats":["upper","lower"]},
+      {"Traps":["upper","lower"]},
+      {"Biceps":["inner","outer", "brachialis"]},
+      {"Triceps":["long","medial","lateral"]},
+      {"Forearm":["supinator","pronator"]}
+    ],
+    "upper": [],
+    "lower": [],
+    "push": [],
+    "pull": [],
+    "legs": []
+  },
+  "movementsToWorkInSplit": {
+    "fullBody": ["squat","lunge","hinge","push","push","pull","pull"],
+    "upper": ["push","pull","push","pull","push","pull"],
+    "lower": ["squat","lunge","hinge","squat","lunge","hinge"],
+    "push": ["push","push","push","push"],
+    "pull": ["pull","pull","pull","pull"],
+    "legs": ["squat","lunge","hinge","squat","hinge"]
+  }
+}

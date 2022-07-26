@@ -6,7 +6,12 @@
         "name": "Overhead Press",
         "movementType": "push",
         "lightOrHeavy": "heavy",
-        "compound": true
+        "muscle": [
+          { "mainMuscleGroup": [ "Deltoid", "front" ] },
+          { "relatedMuscleGroups":
+            [ [ "Triceps", "medial" ] ]
+          }
+        ]
       }
     },
     {
@@ -15,7 +20,13 @@
         "name": "Barbell Bench Press",
         "movementType": "push",
         "lightOrHeavy": "heavy",
-        "compound": true
+        "muscle": [
+          { "mainMuscleGroup": [ "Pecs", "middle" ] },
+          { "relatedMuscleGroups":
+            [ [ "Pecs", "outer" ],
+              [ "Triceps", "medial" ] ]
+          }
+        ]
       }
     },
     {
@@ -24,7 +35,13 @@
         "name": "Conventional Deadlift",
         "movementType": "hinge",
         "lightOrHeavy": "heavy",
-        "compound": true
+        "muscle": [
+          { "mainMuscleGroup": [ "Glutes", "maximus" ] },
+          { "relatedMuscleGroups":
+            [ [ "Hamstrings", "hamstring" ],
+              [ "Lats", "lower" ] ]
+          }
+        ]
       }
     },
     {
@@ -33,7 +50,10 @@
         "name": "Alternating Bicep Curl",
         "movementType": "pull",
         "lightOrHeavy": "light",
-        "compound": false
+        "muscle": [
+          { "mainMuscleGroup": [ "Biceps", "inner" ] },
+          { "relatedMuscleGroups": [null] }
+        ]
       }
     }
   ]
