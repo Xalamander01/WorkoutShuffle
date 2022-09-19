@@ -13,4 +13,8 @@ public class MuscleGroup {
 
     public String getSubMuscleGroup() { return subMuscleGroup; }
     public void setSubMuscleGroup(String subMuscleGroup) { this.subMuscleGroup = subMuscleGroup; }
+
+    public void printMuscleGroup(String prefix) {
+        System.out.println( prefix + "Muscle Group: " + this.subMuscleGroup + " " + this.majorMuscleGroup);
+    }
 }

@@ -16,28 +16,24 @@ import java.util.Map;
 public class JsonToPOJOConverter {
     public JsonToPOJOConverter() {}
 
-    public List<Muscle> JsonToMuscles(String filePath) throws IOException {
+    public List<MuscleGroup> JsonToMuscleGroups(String filePath) throws IOException {
 
         JSONObject jsonObject = JSONUtil.parseJSONFile(filePath);
 
+        List<MuscleGroup> allMuscleGroups = new ArrayList<>();
+
         for ( int i=0 ; i<jsonObject.getJSONArray("muscleGroups").length(); i++ ) {
             for ( String mainMuscleGroup : jsonObject.getJSONArray("muscleGroups").getJSONObject(i).keySet()) {
-                //System.out.println(mainMuscleGroup);
-                //System.out.println(jsonObject.getJSONArray("muscleGroups").getJSONObject(i).getJSONArray(mainMuscleGroup));
                 for ( int j=0; j <jsonObject.getJSONArray("muscleGroups").getJSONObject(i).getJSONArray(mainMuscleGroup).length(); j++) {
-
+                    MuscleGroup muscleGroupToAdd = new MuscleGroup();
+                    muscleGroupToAdd.setMajorMuscleGroup(mainMuscleGroup);
+                    muscleGroupToAdd.setSubMuscleGroup((String) jsonObject.getJSONArray("muscleGroups").getJSONObject(i).getJSONArray(mainMuscleGroup).get(j));
+                    allMuscleGroups.add(muscleGroupToAdd);
                 }
-
-                //System.out.println(jsonObject.getJSONArray("muscleGroups").getJSONObject(i).get(String.valueOf(jsonObject.getJSONArray("muscleGroups").getJSONObject(i).keySet())));
-
-                //for (int j = 0; j<jsonObject.getJSONArray("muscleGroups").getJSONObject(i).get(); j++) {
-                //    movementsList.add((String) jsonObject.getJSONObject("movementsToWorkInWorkout").getJSONArray(workoutType).get(j));
-                //}
-                //movementsToWorkInWorkout.put(workoutType,movementsList);
             }
         }
 
-        return null;
+        return allMuscleGroups;
     }
 
     public Map<String, List<String>> JsonToMovementTypes(String filePath) throws IOException {
@@ -92,7 +88,6 @@ public class JsonToPOJOConverter {
             Exercise exerciseToAdd = new Exercise();
             Muscle muscleToAdd = new Muscle();
             MuscleGroup mainMuscleGroupToAdd = new MuscleGroup();
-            MuscleGroup relatedMuscleGroupToAdd = new MuscleGroup();
             List<MuscleGroup> relatedMuscleGroupsToAdd = new ArrayList<>();
 
             exerciseToAdd.setName((String) exercise.get("name"));
@@ -105,11 +100,13 @@ public class JsonToPOJOConverter {
 
             if ( !relatedMuscleGroups.get(0).equals(null)) {
                 for ( int j=0; j<relatedMuscleGroups.length(); j++) {
+                    MuscleGroup relatedMuscleGroupToAdd = new MuscleGroup();
                     relatedMuscleGroupToAdd.setMajorMuscleGroup((String) relatedMuscleGroups.getJSONArray(j).get(0));
                     relatedMuscleGroupToAdd.setSubMuscleGroup((String) relatedMuscleGroups.getJSONArray(j).get(1));
                     relatedMuscleGroupsToAdd.add(relatedMuscleGroupToAdd);
                 }
             }
+
             muscleToAdd.setRelatedMuscleGroups(relatedMuscleGroupsToAdd);
 
             exerciseToAdd.setMuscle(muscleToAdd);

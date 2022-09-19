@@ -1,5 +1,3 @@
-import Exercises.ExerciseDictionary;
-import JSONHandler.JsonToPOJOConverter;
 import Workouts.Workout;
 
 import java.io.IOException;
@@ -9,13 +7,6 @@ public class WorkoutShuffle {
 
         Workout workout = new Workout();
         workout.createWorkout("fullBody");
-
-        //ExerciseDictionary exerciseDictionary = new JsonToPOJOConverter().JsonToDictionary("src/main/resources/ExerciseDictionary.json");
-        //Map<String, List<String>> movementsToWorkInWorkout = new JSONHandler.JsonToPOJOConverter().JsonToMovementTypes("src/main/resources/WorkoutProperties.json");
-        //Map<String, List<String>> lightOrHeavyInWorkout = new JSONHandler.JsonToPOJOConverter().JsonToLightOrHeavy("src/main/resources/WorkoutProperties.json");
-        //for ( String name : exerciseDictionary.getExerciseDictionary().keySet() ) {
-            //System.out.println(exerciseDictionary.getExercise(name).getMuscle().getRelatedMuscleGroups());
-        //}
     }
 
     /*

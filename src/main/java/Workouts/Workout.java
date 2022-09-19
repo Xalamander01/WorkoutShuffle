@@ -1,13 +1,13 @@
 package Workouts;
+
 import Exercises.Exercise;
 import Exercises.ExerciseDictionary;
 import JSONHandler.JsonToPOJOConverter;
-import Muscles.Muscle;
+import Muscles.MuscleGroup;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Workout {
     private Workout workout;
@@ -21,18 +21,19 @@ public class Workout {
 
     public Workout createWorkout(String workoutType) throws IOException {
 
+        Workout workoutToReturn = new Workout();
         ExerciseDictionary exerciseDictionary = new JsonToPOJOConverter().JsonToDictionary("src/main/resources/ExerciseDictionary.json");
-        Map<String, List<String>> movementsToWorkInWorkout = new JsonToPOJOConverter().JsonToMovementTypes("src/main/resources/WorkoutProperties.json");
-        Map<String, List<String>> lightOrHeavyInWorkout = new JsonToPOJOConverter().JsonToLightOrHeavy("src/main/resources/WorkoutProperties.json");
-        List<Muscle> muscleList = new JsonToPOJOConverter().JsonToMuscles("src/main/resources/MuscleGroups.json");
+        List<MuscleGroup> muscleGroupsList = new JsonToPOJOConverter().JsonToMuscleGroups("src/main/resources/MuscleGroups.json");
+        List<String> movementsToWorkInWorkout = new JsonToPOJOConverter().JsonToMovementTypes("src/main/resources/WorkoutProperties.json").get(workoutType);
+        List<String> lightOrHeavyInWorkout = new JsonToPOJOConverter().JsonToLightOrHeavy("src/main/resources/WorkoutProperties.json").get(workoutType);
 
-        for ( String name : exerciseDictionary.getExerciseDictionary().keySet() ) {
-            //System.out.println(exerciseDictionary.getExercise(name).getMuscle().getRelatedMuscleGroups());
-        }
-
-        //System.out.println(exerciseDictionary);
         //System.out.println(movementsToWorkInWorkout);
         //System.out.println(lightOrHeavyInWorkout);
+        //System.out.println(exerciseDictionary.getExerciseDictionary().values());
+
+        //for ( Exercise exercise : exerciseDictionary.getExerciseDictionary().values() ) {
+            //System.out.println(exercise.getName().toString());
+        //}
 
         return null;
     }
