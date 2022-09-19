@@ -1,3 +1,5 @@
+package Muscles;
+
 import java.util.List;
 
 public class Muscle {

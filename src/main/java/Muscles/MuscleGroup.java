@@ -1,3 +1,5 @@
+package Muscles;
+
 public class MuscleGroup {
 
     private String majorMuscleGroup;

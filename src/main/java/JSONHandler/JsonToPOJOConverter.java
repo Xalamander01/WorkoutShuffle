@@ -1,0 +1,121 @@
+package JSONHandler;
+
+import Exercises.Exercise;
+import Exercises.ExerciseDictionary;
+import Muscles.Muscle;
+import Muscles.MuscleGroup;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class JsonToPOJOConverter {
+    public JsonToPOJOConverter() {}
+
+    public List<Muscle> JsonToMuscles(String filePath) throws IOException {
+
+        JSONObject jsonObject = JSONUtil.parseJSONFile(filePath);
+
+        for ( int i=0 ; i<jsonObject.getJSONArray("muscleGroups").length(); i++ ) {
+            for ( String mainMuscleGroup : jsonObject.getJSONArray("muscleGroups").getJSONObject(i).keySet()) {
+                //System.out.println(mainMuscleGroup);
+                //System.out.println(jsonObject.getJSONArray("muscleGroups").getJSONObject(i).getJSONArray(mainMuscleGroup));
+                for ( int j=0; j <jsonObject.getJSONArray("muscleGroups").getJSONObject(i).getJSONArray(mainMuscleGroup).length(); j++) {
+
+                }
+
+                //System.out.println(jsonObject.getJSONArray("muscleGroups").getJSONObject(i).get(String.valueOf(jsonObject.getJSONArray("muscleGroups").getJSONObject(i).keySet())));
+
+                //for (int j = 0; j<jsonObject.getJSONArray("muscleGroups").getJSONObject(i).get(); j++) {
+                //    movementsList.add((String) jsonObject.getJSONObject("movementsToWorkInWorkout").getJSONArray(workoutType).get(j));
+                //}
+                //movementsToWorkInWorkout.put(workoutType,movementsList);
+            }
+        }
+
+        return null;
+    }
+
+    public Map<String, List<String>> JsonToMovementTypes(String filePath) throws IOException {
+
+        JSONObject jsonObject = JSONUtil.parseJSONFile(filePath);
+
+        Map<String,List<String>> movementsToWorkInWorkout = new HashMap<>();
+
+        for ( String workoutType : jsonObject.getJSONObject("movementsToWorkInWorkout").keySet() ) {
+            List<String> movementsList = new ArrayList<>();
+
+            for (int j = 0; j<jsonObject.getJSONObject("movementsToWorkInWorkout").getJSONArray(workoutType).length(); j++) {
+                movementsList.add((String) jsonObject.getJSONObject("movementsToWorkInWorkout").getJSONArray(workoutType).get(j));
+            }
+            movementsToWorkInWorkout.put(workoutType,movementsList);
+        }
+
+        return movementsToWorkInWorkout;
+    }
+
+    public Map<String, List<String>> JsonToLightOrHeavy(String filePath) throws IOException {
+
+        JSONObject jsonObject = JSONUtil.parseJSONFile(filePath);
+
+        Map<String,List<String>> lightOrHeavyInWorkout = new HashMap<>();
+
+        for ( String workoutType : jsonObject.getJSONObject("lightOrHeavyInWorkout").keySet() ) {
+            List<String> lightOrHeavy = new ArrayList<>();
+
+            for (int j = 0; j<jsonObject.getJSONObject("lightOrHeavyInWorkout").getJSONArray(workoutType).length(); j++) {
+                lightOrHeavy.add((String) jsonObject.getJSONObject("lightOrHeavyInWorkout").getJSONArray(workoutType).get(j));
+            }
+            lightOrHeavyInWorkout.put(workoutType,lightOrHeavy);
+        }
+
+        return lightOrHeavyInWorkout;
+    }
+
+    public ExerciseDictionary JsonToDictionary(String filePath) throws IOException {
+
+        JSONObject jsonObject = JSONUtil.parseJSONFile(filePath);
+        ExerciseDictionary exerciseDictionary = new ExerciseDictionary();
+
+        for( int i=0; i<jsonObject.getJSONArray("exerciseDictionary").length(); i++) {
+
+            String exerciseShortName = (String) jsonObject.getJSONArray("exerciseDictionary").getJSONObject(i).get("ShortName");
+
+            org.json.JSONObject exercise = jsonObject.getJSONArray("exerciseDictionary").getJSONObject(i).getJSONObject("Exercise");
+            org.json.JSONArray mainMuscleGroup = jsonObject.getJSONArray("exerciseDictionary").getJSONObject(i).getJSONObject("Exercise").getJSONArray("muscle").getJSONObject(0).getJSONArray("mainMuscleGroup");
+            JSONArray relatedMuscleGroups = jsonObject.getJSONArray("exerciseDictionary").getJSONObject(i).getJSONObject("Exercise").getJSONArray("muscle").getJSONObject(1).getJSONArray("relatedMuscleGroups");
+
+            Exercise exerciseToAdd = new Exercise();
+            Muscle muscleToAdd = new Muscle();
+            MuscleGroup mainMuscleGroupToAdd = new MuscleGroup();
+            MuscleGroup relatedMuscleGroupToAdd = new MuscleGroup();
+            List<MuscleGroup> relatedMuscleGroupsToAdd = new ArrayList<>();
+
+            exerciseToAdd.setName((String) exercise.get("name"));
+            exerciseToAdd.setMovementType((String) exercise.get("movementType"));
+            exerciseToAdd.setLightOrHeavy((String) exercise.get("lightOrHeavy"));
+
+            mainMuscleGroupToAdd.setMajorMuscleGroup((String) mainMuscleGroup.get(0));
+            mainMuscleGroupToAdd.setSubMuscleGroup((String) mainMuscleGroup.get(1));
+            muscleToAdd.setMainMuscleGroup(mainMuscleGroupToAdd);
+
+            if ( !relatedMuscleGroups.get(0).equals(null)) {
+                for ( int j=0; j<relatedMuscleGroups.length(); j++) {
+                    relatedMuscleGroupToAdd.setMajorMuscleGroup((String) relatedMuscleGroups.getJSONArray(j).get(0));
+                    relatedMuscleGroupToAdd.setSubMuscleGroup((String) relatedMuscleGroups.getJSONArray(j).get(1));
+                    relatedMuscleGroupsToAdd.add(relatedMuscleGroupToAdd);
+                }
+            }
+            muscleToAdd.setRelatedMuscleGroups(relatedMuscleGroupsToAdd);
+
+            exerciseToAdd.setMuscle(muscleToAdd);
+
+            exerciseDictionary.addExercise(exerciseShortName,exerciseToAdd);
+        }
+        return exerciseDictionary;
+    }
+}

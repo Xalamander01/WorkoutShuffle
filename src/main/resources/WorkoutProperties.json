@@ -8,7 +8,7 @@
         ["push","legs","pull","legs","arms"]
       ]
     },
-  "musclesToWorkInSplit": {
+  "musclesToWorkInWorkout": {
     "fullBody": [
       {"Quads":["upper","lower"]},
       {"Glutes":["maximus","medius"]},
@@ -29,7 +29,15 @@
     "pull": [],
     "legs": []
   },
-  "movementsToWorkInSplit": {
+  "lightOrHeavyInWorkout": {
+    "fullBody": ["heavy","heavy","heavy","either","light","light","light"],
+    "upper": ["heavy","heavy","heavy","either","light","light"],
+    "lower": ["heavy","heavy","heavy","either","light","light"],
+    "push": ["heavy","heavy","light","light"],
+    "pull": ["heavy","heavy","light","light"],
+    "legs": ["heavy","heavy","heavy","light","light"]
+  },
+  "movementsToWorkInWorkout": {
     "fullBody": ["squat","lunge","hinge","push","push","pull","pull"],
     "upper": ["push","pull","push","pull","push","pull"],
     "lower": ["squat","lunge","hinge","squat","lunge","hinge"],

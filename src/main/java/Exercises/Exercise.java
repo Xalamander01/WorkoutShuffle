@@ -1,5 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
+package Exercises;
+
+import Muscles.Muscle;
 
 public class Exercise {
     private String name;

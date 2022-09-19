@@ -1,3 +1,7 @@
+package Exercises;
+
+import Exercises.Exercise;
+
 import java.util.HashMap;
 
 public class ExerciseDictionary {
