@@ -19,13 +19,33 @@ public class Workout {
     public Workout getWorkout() { return workout; }
     public void setWorkout(Workout workout) { this.workout = workout; }
 
+    //randomly select muscle groups to work depending on workout type
+    public List<MuscleGroup> getMuscleGroupsToWorkInWorkout(String workoutType) throws IOException {
+
+        List<MuscleGroup> muscleGroupsList = new JsonToPOJOConverter().JsonToMuscleGroups("src/main/resources/MuscleGroups.json");
+
+        List<String> movementsToWorkInWorkout = new JsonToPOJOConverter().JsonToMovementTypes("src/main/resources/WorkoutProperties.json").get(workoutType);
+        List<String> lightOrHeavyInWorkout = new JsonToPOJOConverter().JsonToLightOrHeavy("src/main/resources/WorkoutProperties.json").get(workoutType);
+
+
+
+        return null;
+    }
+
+    //create final workout
     public Workout createWorkout(String workoutType) throws IOException {
 
         Workout workoutToReturn = new Workout();
         ExerciseDictionary exerciseDictionary = new JsonToPOJOConverter().JsonToDictionary("src/main/resources/ExerciseDictionary.json");
         List<MuscleGroup> muscleGroupsList = new JsonToPOJOConverter().JsonToMuscleGroups("src/main/resources/MuscleGroups.json");
+
         List<String> movementsToWorkInWorkout = new JsonToPOJOConverter().JsonToMovementTypes("src/main/resources/WorkoutProperties.json").get(workoutType);
         List<String> lightOrHeavyInWorkout = new JsonToPOJOConverter().JsonToLightOrHeavy("src/main/resources/WorkoutProperties.json").get(workoutType);
+        List<MuscleGroup> muscleGroupsInWorkout = getMuscleGroupsToWorkInWorkout(workoutType);
+
+        List<String> lightOrHeavyInNewWorkout = new ArrayList<>();
+        List<String> movementsWorkedInNewWorkout = new ArrayList<>();
+        List<MuscleGroup> muscleGroupsInNewWorkout = new ArrayList<>();
 
         //System.out.println(movementsToWorkInWorkout);
         //System.out.println(lightOrHeavyInWorkout);
