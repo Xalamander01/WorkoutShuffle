@@ -15,4 +15,11 @@ public class Muscle {
 
     public List<MuscleGroup> getRelatedMuscleGroups() { return relatedMuscleGroups; }
     public void setRelatedMuscleGroups(List<MuscleGroup> relatedMuscleGroups) { this.relatedMuscleGroups = relatedMuscleGroups; }
+
+    public void printMuscleGroups() {
+        this.getMainMuscleGroup().printMuscleGroup("Main ");
+        for ( MuscleGroup relatedMuscleGroup : this.getRelatedMuscleGroups()) {
+            relatedMuscleGroup.printMuscleGroup("Related ");
+        }
+    }
 }

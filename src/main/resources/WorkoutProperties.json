@@ -8,31 +8,10 @@
         ["push","legs","pull","legs","arms"]
       ]
     },
-  "musclesToWorkInWorkout": {
-    "fullBody": [
-      {"Quads":["upper","lower"]},
-      {"Glutes":["maximus","medius"]},
-      {"Hamstrings":["hamstring"]},
-      {"Calves":["calf"]},
-      {"Abs":["oblique","abs","transvers"]},
-      {"Pecs":["upper","middle","lower","inner","outer"]},
-      {"Delts":["front","middle","rear"]},
-      {"Lats":["upper","lower"]},
-      {"Traps":["upper","lower"]},
-      {"Biceps":["inner","outer", "brachialis"]},
-      {"Triceps":["long","medial","lateral"]},
-      {"Forearm":["supinator","pronator"]}
-    ],
-    "upper": [],
-    "lower": [],
-    "push": [],
-    "pull": [],
-    "legs": []
-  },
   "lightOrHeavyInWorkout": {
-    "fullBody": ["heavy","heavy","heavy","either","light","light","light"],
-    "upper": ["heavy","heavy","heavy","either","light","light"],
-    "lower": ["heavy","heavy","heavy","either","light","light"],
+    "fullBody": ["heavy","light","light","heavy","light","heavy","light"],
+    "upper": ["heavy","heavy","heavy","light","light","light"],
+    "lower": ["heavy","heavy","heavy","light","light","light"],
     "push": ["heavy","heavy","light","light"],
     "pull": ["heavy","heavy","light","light"],
     "legs": ["heavy","heavy","heavy","light","light"]

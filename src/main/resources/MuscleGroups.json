@@ -12,33 +12,5 @@
     {"Biceps":["inner","outer", "brachialis"]},
     {"Triceps":["long","medial","lateral"]},
     {"Forearm":["supinator","pronator"]}
-  ],
-  "muscleMovements": [
-    {"Quads":["hinge","lunge","squat"]},
-    {"Glutes":["hinge","lunge","squat"]},
-    {"Hamstrings":["hinge","lunge","squat"]},
-    {"Calves":["lunge","squat"]},
-    {"Abs":["misc"]},
-    {"Pecs":["push"]},
-    {"Delts":["push", "pull"]},
-    {"Lats":["pull"]},
-    {"Traps":["pull"]},
-    {"Biceps":["pull"]},
-    {"Triceps":["push"]},
-    {"Forearm":["misc"]}
-  ],
-  "muscleLightOrHeavy": [
-    {"Quads":["heavy"]},
-    {"Glutes":["heavy"]},
-    {"Hamstrings":["heavy","light"]},
-    {"Calves":["light"]},
-    {"Abs":["light"]},
-    {"Pecs":["heavy","light"]},
-    {"Delts":["light","heavy"]},
-    {"Lats":["heavy"]},
-    {"Traps":["heavy"]},
-    {"Biceps":["light"]},
-    {"Triceps":["light"]},
-    {"Forearm":["light"]}
   ]
 }

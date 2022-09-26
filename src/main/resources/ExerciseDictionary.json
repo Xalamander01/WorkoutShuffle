@@ -55,6 +55,138 @@
           { "relatedMuscleGroups": [null] }
         ]
       }
+    },
+    {
+      "ShortName": "barbellBackSquat",
+      "Exercise": {
+        "name": "Barbell Back Squat",
+        "movementType": "squat",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "upper" ] },
+          { "relatedMuscleGroups": [["Quads","lower"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "barbellFrontSquat",
+      "Exercise": {
+        "name": "Barbell Front Squat",
+        "movementType": "squat",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "upper" ] },
+          { "relatedMuscleGroups": [["Quads","lower"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "legPress",
+      "Exercise": {
+        "name": "Leg Press",
+        "movementType": "squat",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "upper" ] },
+          { "relatedMuscleGroups": [["Quads","lower"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "hackSquat",
+      "Exercise": {
+        "name": "Hack Squat",
+        "movementType": "squat",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "upper" ] },
+          { "relatedMuscleGroups": [["Quads","lower"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "singleLegRDL",
+      "Exercise": {
+        "name": "Single Leg RDL",
+        "movementType": "hinge",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Hamstrings", "hamstring" ] },
+          { "relatedMuscleGroups": [["Quads","upper"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "bulgarianSplitSquat",
+      "Exercise": {
+        "name": "Bulgarian Split Squat",
+        "movementType": "lunge",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "lower" ] },
+          { "relatedMuscleGroups": [["Glutes","maximus"],["Glutes","medius"],["Quads","upper"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "lunge",
+      "Exercise": {
+        "name": "Lunge",
+        "movementType": "lunge",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "lower" ] },
+          { "relatedMuscleGroups": [["Glutes","maximus"],["Glutes","medius"],["Quads","upper"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "pullUp",
+      "Exercise": {
+        "name": "Pull Up",
+        "movementType": "pull",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Lats", "upper" ] },
+          { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "chinUp",
+      "Exercise": {
+        "name": "Chin Up",
+        "movementType": "pull",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Lats", "upper" ] },
+          { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"],["Biceps","inner"],["Biceps","outer"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "backwardLunge",
+      "Exercise": {
+        "name": "Backward Lunge",
+        "movementType": "lunge",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "lower" ] },
+          { "relatedMuscleGroups": [["Glutes","maximus"],["Glutes","medius"],["Quads","upper"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "facePull",
+      "Exercise": {
+        "name": "Face Pull",
+        "movementType": "pull",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Delts", "rear" ] },
+          { "relatedMuscleGroups": [null] }
+        ]
+      }
     }
   ]
 }

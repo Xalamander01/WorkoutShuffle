@@ -20,14 +20,24 @@ public class Workout {
     public void setWorkout(Workout workout) { this.workout = workout; }
 
     //randomly select muscle groups to work depending on workout type
-    public List<MuscleGroup> getMuscleGroupsToWorkInWorkout(String workoutType) throws IOException {
+    public List<Exercise> getExercisesToWorkInWorkout(String workoutType) throws IOException {
 
-        List<MuscleGroup> muscleGroupsList = new JsonToPOJOConverter().JsonToMuscleGroups("src/main/resources/MuscleGroups.json");
+        ExerciseDictionary exerciseDictionary = new JsonToPOJOConverter().JsonToDictionary("src/main/resources/ExerciseDictionary.json");
 
         List<String> movementsToWorkInWorkout = new JsonToPOJOConverter().JsonToMovementTypes("src/main/resources/WorkoutProperties.json").get(workoutType);
         List<String> lightOrHeavyInWorkout = new JsonToPOJOConverter().JsonToLightOrHeavy("src/main/resources/WorkoutProperties.json").get(workoutType);
 
 
+        for ( int i=0 ; i<movementsToWorkInWorkout.size(); i++ ) {
+            System.out.println("Looking for a " + lightOrHeavyInWorkout.get(i) + " " + movementsToWorkInWorkout.get(i) + " exercise." );
+
+            for (Exercise exercise : exerciseDictionary.getExerciseDictionary().values() ) {
+                if ( exercise.getLightOrHeavy().equals(lightOrHeavyInWorkout.get(i)) && exercise.getMovementType().equals(movementsToWorkInWorkout.get(i)) ) {
+                    System.out.print("LOOKING FOR A " + exercise.getLightOrHeavy() + " " + exercise.getMovementType() + " EXERCISE AND FOUND " + exercise.getName());
+                    System.out.println(". This exercise works mostly the " + exercise.getMuscle().getMainMuscleGroup().getSubMuscleGroup() + " " + exercise.getMuscle().getMainMuscleGroup().getMajorMuscleGroup());
+                }
+            }
+        }
 
         return null;
     }
@@ -41,7 +51,7 @@ public class Workout {
 
         List<String> movementsToWorkInWorkout = new JsonToPOJOConverter().JsonToMovementTypes("src/main/resources/WorkoutProperties.json").get(workoutType);
         List<String> lightOrHeavyInWorkout = new JsonToPOJOConverter().JsonToLightOrHeavy("src/main/resources/WorkoutProperties.json").get(workoutType);
-        List<MuscleGroup> muscleGroupsInWorkout = getMuscleGroupsToWorkInWorkout(workoutType);
+        List<Exercise> exercisesInWorkout = getExercisesToWorkInWorkout(workoutType);
 
         List<String> lightOrHeavyInNewWorkout = new ArrayList<>();
         List<String> movementsWorkedInNewWorkout = new ArrayList<>();
