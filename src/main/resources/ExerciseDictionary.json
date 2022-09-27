@@ -15,9 +15,9 @@
       }
     },
     {
-      "ShortName": "barbellBenchPress",
+      "ShortName": "flatBarbellBenchPress",
       "Exercise": {
-        "name": "Barbell Bench Press",
+        "name": "Flat Barbell Bench Press",
         "movementType": "push",
         "lightOrHeavy": "heavy",
         "muscle": [
@@ -30,17 +30,114 @@
       }
     },
     {
-      "ShortName": "conventionalDeadlift",
+      "ShortName": "declineBarbellBenchPress",
       "Exercise": {
-        "name": "Conventional Deadlift",
-        "movementType": "hinge",
+        "name": "Decline Barbell Bench Press",
+        "movementType": "push",
         "lightOrHeavy": "heavy",
         "muscle": [
-          { "mainMuscleGroup": [ "Glutes", "maximus" ] },
+          { "mainMuscleGroup": [ "Pecs", "lower" ] },
           { "relatedMuscleGroups":
-            [ [ "Hamstrings", "hamstring" ],
-              [ "Lats", "lower" ] ]
+          [ [ "Pecs", "outer" ],
+            [ "Pecs", "middle" ],
+            [ "Triceps", "medial" ] ]
           }
+        ]
+      }
+    },
+    {
+      "ShortName": "landminePress",
+      "Exercise": {
+        "name": "Landmine Press",
+        "movementType": "push",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Delts", "front" ] },
+          { "relatedMuscleGroups": [["Triceps", "medial"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "dumbbellFrontRaise",
+      "Exercise": {
+        "name": "Dumbbell Front Raise",
+        "movementType": "push",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Delts", "front" ] },
+          { "relatedMuscleGroups": [null] }
+        ]
+      }
+    },
+    {
+      "ShortName": "skullcrusher",
+      "Exercise": {
+        "name": "Skullcrusher",
+        "movementType": "push",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Triceps", "long" ] },
+          { "relatedMuscleGroups": [["Triceps", "medial"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "pullUp",
+      "Exercise": {
+        "name": "Pull Up",
+        "movementType": "pull",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Lats", "upper" ] },
+          { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "chinUp",
+      "Exercise": {
+        "name": "Chin Up",
+        "movementType": "pull",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Lats", "upper" ] },
+          { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"],["Biceps","inner"],["Biceps","outer"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "landmineRow",
+      "Exercise": {
+        "name": "Landmine Row",
+        "movementType": "pull",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Lats", "upper" ] },
+          { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"],["Biceps","outer"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "facePull",
+      "Exercise": {
+        "name": "Face Pull",
+        "movementType": "pull",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Delts", "rear" ] },
+          { "relatedMuscleGroups": [null] }
+        ]
+      }
+    },
+    {
+      "ShortName": "hammerCurl",
+      "Exercise": {
+        "name": "Hammer Curl",
+        "movementType": "pull",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Biceps", "brachialis" ] },
+          { "relatedMuscleGroups": [["Biceps", "outer"], ["Biceps", "outer"]] }
         ]
       }
     },
@@ -52,7 +149,7 @@
         "lightOrHeavy": "light",
         "muscle": [
           { "mainMuscleGroup": [ "Biceps", "inner" ] },
-          { "relatedMuscleGroups": [null] }
+          { "relatedMuscleGroups": [["Biceps", "outer"]] }
         ]
       }
     },
@@ -105,6 +202,57 @@
       }
     },
     {
+      "ShortName": "conventionalDeadlift",
+      "Exercise": {
+        "name": "Conventional Deadlift",
+        "movementType": "hinge",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Glutes", "maximus" ] },
+          { "relatedMuscleGroups":
+          [ [ "Hamstrings", "hamstring" ],
+            [ "Lats", "lower" ] ]
+          }
+        ]
+      }
+    },
+    {
+      "ShortName": "romanianDeadlift",
+      "Exercise": {
+        "name": "Romanian Deadlift",
+        "movementType": "hinge",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Hamstrings", "hamstring" ] },
+          { "relatedMuscleGroups": [["Quads","upper"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "lyingHamstringCurl",
+      "Exercise": {
+        "name": "Lying Hamstring Curl",
+        "movementType": "hinge",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Hamstrings", "hamstring" ] },
+          { "relatedMuscleGroups": [["Quads","upper"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "seatedHamstringCurl",
+      "Exercise": {
+        "name": "Seated Hamstring Curl",
+        "movementType": "hinge",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Hamstrings", "hamstring" ] },
+          { "relatedMuscleGroups": [["Quads","upper"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
       "ShortName": "singleLegRDL",
       "Exercise": {
         "name": "Single Leg RDL",
@@ -141,30 +289,6 @@
       }
     },
     {
-      "ShortName": "pullUp",
-      "Exercise": {
-        "name": "Pull Up",
-        "movementType": "pull",
-        "lightOrHeavy": "heavy",
-        "muscle": [
-          { "mainMuscleGroup": [ "Lats", "upper" ] },
-          { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"]] }
-        ]
-      }
-    },
-    {
-      "ShortName": "chinUp",
-      "Exercise": {
-        "name": "Chin Up",
-        "movementType": "pull",
-        "lightOrHeavy": "heavy",
-        "muscle": [
-          { "mainMuscleGroup": [ "Lats", "upper" ] },
-          { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"],["Biceps","inner"],["Biceps","outer"]] }
-        ]
-      }
-    },
-    {
       "ShortName": "backwardLunge",
       "Exercise": {
         "name": "Backward Lunge",
@@ -173,18 +297,6 @@
         "muscle": [
           { "mainMuscleGroup": [ "Quads", "lower" ] },
           { "relatedMuscleGroups": [["Glutes","maximus"],["Glutes","medius"],["Quads","upper"]] }
-        ]
-      }
-    },
-    {
-      "ShortName": "facePull",
-      "Exercise": {
-        "name": "Face Pull",
-        "movementType": "pull",
-        "lightOrHeavy": "light",
-        "muscle": [
-          { "mainMuscleGroup": [ "Delts", "rear" ] },
-          { "relatedMuscleGroups": [null] }
         ]
       }
     }

@@ -5,8 +5,8 @@ import java.io.IOException;
 public class WorkoutShuffle {
     public static void main(String[] args) throws IOException {
 
-        Workout workout = new Workout();
-        workout.createWorkout("fullBody");
+        Workout workout = new Workout().createWorkout("fullBody");
+
     }
 
     /*

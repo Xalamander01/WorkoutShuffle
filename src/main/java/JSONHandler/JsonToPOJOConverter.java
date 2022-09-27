@@ -16,6 +16,26 @@ import java.util.Map;
 public class JsonToPOJOConverter {
     public JsonToPOJOConverter() {}
 
+    public HashMap<String, List<Boolean>> JsonToExerciseRecency(String filePath, Integer recencyListDepth) throws IOException {
+
+        JSONObject jsonObject = JSONUtil.parseJSONFile(filePath);
+        HashMap<String, List<Boolean>> exerciseRecency = new HashMap<>();
+
+        for ( String exerciseName : jsonObject.keySet()) {
+
+            List<Boolean> recencyList = new ArrayList<>();
+
+            for ( Object recentlyUsed : jsonObject.getJSONArray(exerciseName) ) {
+                recencyList.add((Boolean) recentlyUsed);
+            }
+            //System.out.println(exerciseName);
+            //System.out.println(jsonObject.get(exerciseName));
+            exerciseRecency.put(exerciseName, recencyList);
+        }
+
+        return exerciseRecency;
+    }
+
     public List<MuscleGroup> JsonToMuscleGroups(String filePath) throws IOException {
 
         JSONObject jsonObject = JSONUtil.parseJSONFile(filePath);

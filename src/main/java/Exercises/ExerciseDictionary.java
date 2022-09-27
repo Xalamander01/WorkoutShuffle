@@ -1,8 +1,7 @@
 package Exercises;
 
-import Exercises.Exercise;
-
 import java.util.HashMap;
+import java.util.Map;
 
 public class ExerciseDictionary {
     private HashMap<String, Exercise> exerciseDictionary;
@@ -25,6 +24,18 @@ public class ExerciseDictionary {
 
     public Exercise getExercise(String shortName) {
         return this.exerciseDictionary.get(shortName);
+    }
+
+    public String getShortName(Exercise exercise) {
+
+        String shortNameToReturn = null;
+
+        for ( Map.Entry<String,Exercise> entry : this.getExerciseDictionary().entrySet() ) {
+            if ( entry.getValue().getName().equals(exercise.getName()) ) {
+                shortNameToReturn = entry.getKey();
+            }
+        }
+        return shortNameToReturn;
     }
 
     public void editExercise(String shortName, Exercise exercise) {
