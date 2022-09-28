@@ -5,8 +5,20 @@ import java.io.IOException;
 public class WorkoutShuffle {
     public static void main(String[] args) throws IOException {
 
-        Workout workout = new Workout().createWorkout("fullBody");
-
+            for ( int i=0; i<5; i++) {
+                Workout fullBodyWorkout = new Workout().createWorkout("fullBody");
+                fullBodyWorkout.printExercises();
+                Workout upperWorkout = new Workout().createWorkout("upper");
+                upperWorkout.printExercises();
+                Workout lowerWorkout = new Workout().createWorkout("lower");
+                lowerWorkout.printExercises();
+                Workout pushWorkout = new Workout().createWorkout("push");
+                pushWorkout.printExercises();
+                Workout pullWorkout = new Workout().createWorkout("pull");
+                pullWorkout.printExercises();
+                Workout legsWorkout = new Workout().createWorkout("legs");
+                legsWorkout.printExercises();
+            }
     }
 
     /*

@@ -24,7 +24,23 @@
           { "mainMuscleGroup": [ "Pecs", "middle" ] },
           { "relatedMuscleGroups":
             [ [ "Pecs", "outer" ],
-              [ "Triceps", "medial" ] ]
+              ["Pecs", "inner"],["Pecs","lower"],[ "Triceps", "medial" ] ]
+          }
+        ]
+      }
+    },
+    {
+      "ShortName": "inclineBarbellBenchPress",
+      "Exercise": {
+        "name": "Decline Barbell Bench Press",
+        "movementType": "push",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Pecs", "upper" ] },
+          { "relatedMuscleGroups":
+          [ [ "Pecs", "outer" ],
+            [ "Pecs", "middle" ],
+            [ "Triceps", "medial" ] ]
           }
         ]
       }
@@ -58,6 +74,30 @@
       }
     },
     {
+      "ShortName": "lRaise",
+      "Exercise": {
+        "name": "L Raise",
+        "movementType": "push",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Delts", "front" ] },
+          { "relatedMuscleGroups": [["Delts", "middle"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "cableFrontRaise",
+      "Exercise": {
+        "name": "Cable Front Raise",
+        "movementType": "push",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Delts", "front" ] },
+          { "relatedMuscleGroups": [null] }
+        ]
+      }
+    },
+    {
       "ShortName": "dumbbellFrontRaise",
       "Exercise": {
         "name": "Dumbbell Front Raise",
@@ -66,6 +106,18 @@
         "muscle": [
           { "mainMuscleGroup": [ "Delts", "front" ] },
           { "relatedMuscleGroups": [null] }
+        ]
+      }
+    },
+    {
+      "ShortName": "tricepPushdown",
+      "Exercise": {
+        "name": "Tricep Pushdown",
+        "movementType": "push",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Triceps", "medial" ] },
+          { "relatedMuscleGroups": [["Triceps", "long"]] }
         ]
       }
     },
@@ -102,6 +154,42 @@
         "muscle": [
           { "mainMuscleGroup": [ "Lats", "upper" ] },
           { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"],["Biceps","inner"],["Biceps","outer"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "wideLatPulldown",
+      "Exercise": {
+        "name": "Wide Grip Lat Pulldown",
+        "movementType": "pull",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Lats", "upper" ] },
+          { "relatedMuscleGroups": [["Lats","lower"],["Traps","lower"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "closeLatPulldown",
+      "Exercise": {
+        "name": "Close Grip Lat Pulldown",
+        "movementType": "pull",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Traps","lower" ] },
+          { "relatedMuscleGroups": [["Lats", "upper"],["Lats","lower"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "invertedLatPulldown",
+      "Exercise": {
+        "name": "Inverted Grip Lat Pulldown",
+        "movementType": "pull",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Biceps","outer" ] },
+          { "relatedMuscleGroups": [["Lats", "upper"],["Lats","lower"],["Traps","lower"]] }
         ]
       }
     },
@@ -154,6 +242,18 @@
       }
     },
     {
+      "ShortName": "lateralRaise",
+      "Exercise": {
+        "name": "Lateral Raise",
+        "movementType": "pull",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Delts", "middle" ] },
+          { "relatedMuscleGroups": [null] }
+        ]
+      }
+    },
+    {
       "ShortName": "barbellBackSquat",
       "Exercise": {
         "name": "Barbell Back Squat",
@@ -202,6 +302,59 @@
       }
     },
     {
+      "ShortName": "landmineSquat",
+      "Exercise": {
+        "name": "Landmine Squat",
+        "movementType": "squat",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "upper" ] },
+          { "relatedMuscleGroups": [["Quads","lower"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "gobletSquat",
+      "Exercise": {
+        "name": "Goblet Squat",
+        "movementType": "squat",
+        "lightOrHeavy": "light",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "upper" ] },
+          { "relatedMuscleGroups": [["Quads","lower"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "sumoDeadlift",
+      "Exercise": {
+        "name": "Sumo Deadlift",
+        "movementType": "hinge",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Glutes", "maximus" ] },
+          { "relatedMuscleGroups":
+          [ [ "Hamstrings", "hamstring" ],
+            [ "Lats", "lower" ] ]
+          }
+        ]
+      }
+    },
+    {
+      "ShortName": "glutehamRaise",
+      "Exercise": {
+        "name": "Glute-Ham Raise",
+        "movementType": "hinge",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Glutes", "maximus" ] },
+          { "relatedMuscleGroups":
+          [ [ "Hamstrings", "hamstring" ] ]
+          }
+        ]
+      }
+    },
+    {
       "ShortName": "conventionalDeadlift",
       "Exercise": {
         "name": "Conventional Deadlift",
@@ -221,7 +374,7 @@
       "Exercise": {
         "name": "Romanian Deadlift",
         "movementType": "hinge",
-        "lightOrHeavy": "light",
+        "lightOrHeavy": "heavy",
         "muscle": [
           { "mainMuscleGroup": [ "Hamstrings", "hamstring" ] },
           { "relatedMuscleGroups": [["Quads","upper"],["Glutes","maximus"]] }
@@ -261,6 +414,30 @@
         "muscle": [
           { "mainMuscleGroup": [ "Hamstrings", "hamstring" ] },
           { "relatedMuscleGroups": [["Quads","upper"],["Glutes","maximus"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "barbellLunge",
+      "Exercise": {
+        "name": "Barbell Forward Lunge",
+        "movementType": "lunge",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "lower" ] },
+          { "relatedMuscleGroups": [["Glutes","maximus"],["Glutes","medius"],["Quads","upper"]] }
+        ]
+      }
+    },
+    {
+      "ShortName": "barbellBackLunge",
+      "Exercise": {
+        "name": "Barbell Backward Lunge",
+        "movementType": "lunge",
+        "lightOrHeavy": "heavy",
+        "muscle": [
+          { "mainMuscleGroup": [ "Quads", "lower" ] },
+          { "relatedMuscleGroups": [["Glutes","maximus"],["Glutes","medius"],["Quads","upper"]] }
         ]
       }
     },

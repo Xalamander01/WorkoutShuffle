@@ -47,7 +47,6 @@ public class JsonWriter {
         ExerciseDictionary exerciseDictionary = new JsonToPOJOConverter().JsonToDictionary(EXERCISE_DICTIONARY_JSON);
         HashMap<String, List<Boolean>> updatedExerciseAndRecency = new HashMap<>();
 
-        workout.printExercises();
         for ( Exercise exercise : exerciseDictionary.getExerciseDictionary().values() ) {
 
             List<Boolean> exerciseRecency = exerciseAndRecency.get(exerciseDictionary.getShortName(exercise));

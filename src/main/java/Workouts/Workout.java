@@ -36,6 +36,7 @@ public class Workout {
         for ( Exercise exercise : this.getWorkout()) {
             System.out.print(exercise.getName() + "; ");
         }
+        System.out.println();
     }
 
     //randomly select muscle groups to work depending on workout type
@@ -125,7 +126,6 @@ public class Workout {
         List<Exercise> exercisesInWorkout = getListOfPossibleExercises(workoutType);
         exercisesInWorkout = removeRepeatExercises(exercisesInWorkout);
         Workout workoutToReturn = chooseExercises(exercisesInWorkout, workoutType);
-        //System.out.println(workoutToReturn.getWorkout());
         jsonWriter.updateRepeatExercises(workoutToReturn, EXERCISE_RECENCY_JSON);
 
         return workoutToReturn;
